@@ -1,0 +1,12 @@
+<view class="page-container">
+  <canvas
+    type="webgl2"
+    id="webgl_loader_gltf_compressed"
+    bindtouchstart="defaultHandler"
+    bindtouchmove="defaultHandler"
+    bindtouchcancel="defaultHandler"
+    bindtouchend="defaultHandler"
+    bindtap="defaultHandler"
+  >
+  </canvas>
+</view>

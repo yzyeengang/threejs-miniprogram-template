@@ -1,0 +1,13 @@
+<view class="scene-background">
+  <canvas
+    type="webgl2"
+    id="in-spirit-canvas"
+    bindtouchstart="defaultHandler"
+    bindtouchmove="defaultHandler"
+    bindtouchcancel="defaultHandler"
+    bindtouchend="defaultHandler"
+    bindtap="defaultHandler"
+  >
+  </canvas>
+  <view class="fps-tips" v-if="enableFPS"> FPS:{{ fps }}</view>
+</view>

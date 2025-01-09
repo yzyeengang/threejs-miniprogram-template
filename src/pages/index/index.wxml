@@ -1,0 +1,11 @@
+<view class="content">
+  <image class="logo" src="/static/logo.png"/>
+  <view class="text-area">
+    <text class="title">{{ title }}</text>
+  </view>
+
+  <view class="btns">
+    <button bindtap="navigateTo" data-target="/sub-pack-2/particles/index">粒子效果</button>
+    <button bindtap="navigateTo" data-target="/sub-pack-2/gltf-loader/index">gltf loader</button>
+  </view>
+</view>

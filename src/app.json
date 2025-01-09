@@ -1,0 +1,31 @@
+{
+  "$schema": "https://vite.icebreaker.top/app.json",
+  "pages": [
+    "pages/index/index"
+  ],
+  "subPackages": [
+    {
+      "root": "sub-pack-2",
+      "pages": [
+        "particles/index",
+        "gltf-loader/index"
+      ],
+      "name": "sub-pack-2"
+    }
+  ],
+  "window": {
+    "navigationStyle": "custom",
+    "backgroundColor": "#F8F8F8",
+    "navigationBarTextStyle": "white",
+    "pageOrientation": "auto"
+  },
+  "workers": "workers",
+  //开启worker分包后需要手动调用api加载worker
+//  "workers": {
+//    "path": "workers",
+//    "isSubpackage": true
+//  },
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json"
+}
