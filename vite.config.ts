@@ -29,7 +29,7 @@ export default defineConfig({
   resolve: {
     dedupe: ['three'],
     alias: {
-        '@': path.resolve(__dirname, 'src'),
+      '@': path.resolve(__dirname, 'src'),
     }
   },
   css: {
@@ -43,7 +43,7 @@ export default defineConfig({
     rollupOptions: {
       output: {
         //方便开发者工具的 babel 排除 es6 转 es5 的文件
-        chunkFileNames:"[name].js"
+        chunkFileNames: "[name].js"
       }
     }
   },
@@ -54,9 +54,11 @@ export default defineConfig({
     }),
     // @ts-ignore
     threePlatformAdapter({
-      //一般来说插件会自动在入口chunk添加虚拟模块, 但这个项目每个page都是入口会导致重复添加
-      prefixGlobalOverride:{
-        manualInject:true,
+      //一般来说插件会自动在入口chunk添加虚拟模块, 但此项目每个 page 都是入口会导致重复添加
+      prefixGlobalOverride: {
+        manualInject(chunk: any) {
+          return chunk.name === 'src/app.ts';
+        }
       }
     }),
 
