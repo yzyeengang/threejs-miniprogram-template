@@ -1,0 +1,24 @@
+{
+  "include": ["src/env.d.ts", "src/**/*"],
+  "exclude": ["src/**/__tests__/*"],
+  "compilerOptions": {
+    "noEmit": true,
+    "module": "ESNext",
+    "target": "ESNext",
+    "moduleResolution": "bundler",
+    "resolveJsonModule": true,
+    "allowImportingTsExtensions": true,
+    "lib": [
+      "DOM",
+      "ES2020"
+    ],
+    "types": ["minigame-api-typings"],
+    "composite": true,
+    "allowJs": true,
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}
