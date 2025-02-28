@@ -54,8 +54,8 @@ export default defineConfig({
     }),
     // @ts-ignore
     threePlatformAdapter({
-      //一般来说插件会自动在入口chunk添加虚拟模块, 但此项目每个 page 都是入口会导致重复添加
-      prefixGlobalOverride: {
+      //插件默认会自动在入口 chunk 添加虚拟模块, 但此项目每个 page 都是入口会导致重复添加
+      mergePrefixGlobalOptions: {
         manualInject(chunk: any) {
           return chunk.name === 'src/app.ts';
         }
