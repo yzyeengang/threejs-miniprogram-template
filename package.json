@@ -13,7 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "@minisheep/mini-program-polyfill-core": "^1.0.4",
-    "@minisheep/three-platform-adapter": "^1.1.0",
+    "@minisheep/three-platform-adapter": "^1.2.0",
     "three": "^0.172.0"
   },
   "devDependencies": {

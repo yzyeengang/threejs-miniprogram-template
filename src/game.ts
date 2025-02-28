@@ -16,5 +16,5 @@ wx.onTouchEnd(result.eventHandler);
 wx.onTouchCancel(result.eventHandler);
 
 
-// gltfDemo(result);
-particles(result);
+gltfDemo(result);
+// particles(result);

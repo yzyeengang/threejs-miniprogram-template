@@ -12,8 +12,8 @@ importers:
         specifier: ^1.0.4
         version: 1.0.4
       '@minisheep/three-platform-adapter':
-        specifier: ^1.1.0
-        version: 1.1.0(@minisheep/mini-program-polyfill-core@1.0.4)(three@0.172.0)
+        specifier: ^1.2.0
+        version: 1.2.0(@minisheep/mini-program-polyfill-core@1.0.4)(minigame-api-typings@3.8.7)(three@0.172.0)
       three:
         specifier: ^0.172.0
         version: 0.172.0
@@ -222,13 +222,16 @@ packages:
   '@minisheep/mini-program-polyfill-core@1.0.4':
     resolution: {integrity: sha512-BVbOtk1eg0cDRDgJ+WBWAf9hDR7Zn3xo9j1LBu8CVN+SIYL6ea7JUBG70BefCTTU5pZXsiRD70+SmzA4yiDPqA==}
 
-  '@minisheep/three-platform-adapter@1.1.0':
-    resolution: {integrity: sha512-Z89VZkT+EifTTxTnRjN8p0MBTDJhzFVz8+vfXwIQ8RpT5uQHwZ2oPYq4zIeMI/AFjBIU6fENpn9vNV+oP9ZlfA==}
+  '@minisheep/three-platform-adapter@1.2.0':
+    resolution: {integrity: sha512-1G+DNAGwu6AEVYtJwIgPsJUVB8vWIoC5RwkgPV4Ka3EjY2n7q4EiUiqeA60wl8YSLWZtNIJLzkQokDR9D558Ow==}
     peerDependencies:
       '@minisheep/mini-program-polyfill-core': ^1.0.4
-      miniprogram-api-typings: ^3.0.0
+      minigame-api-typings: '*'
+      miniprogram-api-typings: '*'
       three: '*'
     peerDependenciesMeta:
+      minigame-api-typings:
+        optional: true
       miniprogram-api-typings:
         optional: true
 
@@ -917,10 +920,12 @@ snapshots:
     dependencies:
       type-fest: 4.32.0
 
-  '@minisheep/three-platform-adapter@1.1.0(@minisheep/mini-program-polyfill-core@1.0.4)(three@0.172.0)':
+  '@minisheep/three-platform-adapter@1.2.0(@minisheep/mini-program-polyfill-core@1.0.4)(minigame-api-typings@3.8.7)(three@0.172.0)':
     dependencies:
       '@minisheep/mini-program-polyfill-core': 1.0.4
       three: 0.172.0
+    optionalDependencies:
+      minigame-api-typings: 3.8.7
 
   '@parcel/watcher-android-arm64@2.5.0':
     optional: true
