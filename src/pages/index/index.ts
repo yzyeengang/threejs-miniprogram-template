@@ -1,6 +1,6 @@
 Page({
   data:{
-    title:'hello three.js'
+    title:'hello three.js + tres.js'
   },
   navigateTo(e:WechatMiniprogram.Touch){
     wx.navigateTo({

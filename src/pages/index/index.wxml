@@ -5,7 +5,13 @@
   </view>
 
   <view class="btns">
-    <button bindtap="navigateTo" data-target="/sub-pack-2/particles/index">粒子效果</button>
-    <button bindtap="navigateTo" data-target="/sub-pack-2/gltf-loader/index">gltf loader</button>
+    <button bindtap="navigateTo" data-target="/sub-pack-2/tresjs-demo/index?scene=base">Base</button>
+    <button bindtap="navigateTo" data-target="/sub-pack-2/tresjs-demo/index?scene=orbitControls">OrbitControls</button>
+    <button bindtap="navigateTo" data-target="/sub-pack-2/tresjs-demo/index?scene=animation">Base Animation</button>
+    <button bindtap="navigateTo" data-target="/sub-pack-2/tresjs-demo/index?scene=texture">Base Texture</button>
+    <button bindtap="navigateTo" data-target="/sub-pack-2/tresjs-demo/index?scene=gltf">GLTF loader</button>
+    <button bindtap="navigateTo" data-target="/sub-pack-2/tresjs-demo/index?scene=orbitControls">3D Text</button>
+    <button bindtap="navigateTo" data-target="/sub-pack-2/tresjs-demo/index?scene=lightsShadows">lights Shadows</button>
+    <button bindtap="navigateTo" data-target="/sub-pack-2/tresjs-demo/index?scene=shaders">Shaders</button>
   </view>
 </view>

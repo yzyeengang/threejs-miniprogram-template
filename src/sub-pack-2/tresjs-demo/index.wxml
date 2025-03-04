@@ -1,7 +1,7 @@
 <view class="page-container">
   <canvas
     type="webgl2"
-    id="webgl_loader_gltf_compressed"
+    id="tresjs_demo"
     bindtouchstart="defaultHandler"
     bindtouchmove="defaultHandler"
     bindtouchcancel="defaultHandler"

@@ -4,6 +4,9 @@ import { toCustomChunkPlugin } from '@minisheep/rollup-plugin-to-custom-chunk';
 import glsl from 'vite-plugin-glsl';
 import { visualizer } from 'rollup-plugin-visualizer';
 import * as path from "node:path";
+import vue from '@vitejs/plugin-vue';
+import { templateCompilerOptions } from '@tresjs/core'
+import babel from "@rollup/plugin-babel";
 
 export default defineConfig({
   weapp: {
@@ -40,6 +43,7 @@ export default defineConfig({
     },
   },
   build: {
+    // target: 'chrome79',
     rollupOptions: {
       output: {
         //方便开发者工具的 babel 排除 es6 转 es5 的文件
@@ -47,7 +51,23 @@ export default defineConfig({
       }
     }
   },
+
   plugins: [
+    babel({
+      babelHelpers: 'bundled',
+      babelrc: false,
+      presets: [
+        [
+          '@babel/preset-env',
+          {
+            targets: {
+              chrome: 79
+            },
+          }
+        ]
+      ],
+      include: ['**/node_modules/@tresjs/**']
+    }),
     glsl(),
     visualizer({
       emitFile: true,
@@ -56,10 +76,18 @@ export default defineConfig({
     threePlatformAdapter({
       //插件默认会自动在入口 chunk 添加虚拟模块, 但此项目每个 page 都是入口会导致重复添加
       mergePrefixGlobalOptions: {
+        include: [
+          /\/@vueuse\/(core|shared)\//,
+          /\/@tresjs\/(core|cientos)\//,
+        ],
         manualInject(chunk: any) {
           return chunk.name === 'src/app.ts';
         }
       }
+    }),
+
+    vue({
+      ...templateCompilerOptions,
     }),
 
 
@@ -72,9 +100,14 @@ export default defineConfig({
         '@minisheep/three-platform-adapter/wechat',
       ],
       'sub-pack-2/vendor': [
-        '@minisheep/three-platform-adapter/dist/three-override/jsm/**',
         'three',
         'three/examples/jsm/**',
+        '@minisheep/three-platform-adapter/dist/three-override/jsm/**',
+        'vue',
+        '@tresjs/core',
+        '@tresjs/cientos',
+        'three-stdlib',
+        '@minisheep/platform-adapter-integration/tresjs'
       ]
     })
   ],
