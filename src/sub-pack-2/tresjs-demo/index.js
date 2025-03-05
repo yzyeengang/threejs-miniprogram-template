@@ -32,12 +32,16 @@ Page({
   },
   async onReady() {
     const result = await adapter.useCanvas(`#tresjs_demo`, this);
-    this.defaultHandler = result.eventHandler
-
+    this.defaultHandler = (e) => {
+      if (e.type === 'touchstart') {
+        result.eventHandler({
+          ...e,
+          type: 'touchmove',
+        }, true, true)
+      }
+      result.eventHandler(e, true)
+    };
     this.tresApp = this.data.currentScene && mountTresApp(result.canvas, this.data.currentScene);
-
-    //当前版本的 tresjs 使用 vueuse/core 的 useElementBounding 方式有误
-    this.tresApp && adapter.window.dispatchEvent({ type: 'resize' })
   },
   defaultHandler() {
 

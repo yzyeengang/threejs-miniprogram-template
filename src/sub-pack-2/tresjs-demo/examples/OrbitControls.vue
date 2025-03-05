@@ -1,5 +1,5 @@
 <template>
-    <TresCanvas v-bind="gl" window-size>
+    <TresCanvas v-bind="gl">
         <TresPerspectiveCamera :position="[4, 3, 9]" />
         <OrbitControls />
         <Suspense>

@@ -33,7 +33,7 @@ function onPointerLeave(ev: any) {
 </script>
 
 <template>
-    <TresCanvas v-bind="state" window-size>
+    <TresCanvas v-bind="state">
         <TresPerspectiveCamera
                 :position="[11, 11, 11]"
                 :fov="45"
