@@ -6,6 +6,7 @@
 
   <view class="btns">
     <button bindtap="navigateTo" data-target="/sub-pack-2/tresjs-demo/index?scene=base">Base</button>
+    <button bindtap="navigateTo" data-target="/sub-pack-2/tresjs-demo/index?scene=events">Base Event</button>
     <button bindtap="navigateTo" data-target="/sub-pack-2/tresjs-demo/index?scene=orbitControls">OrbitControls</button>
     <button bindtap="navigateTo" data-target="/sub-pack-2/tresjs-demo/index?scene=animation">Base Animation</button>
     <button bindtap="navigateTo" data-target="/sub-pack-2/tresjs-demo/index?scene=texture">Base Texture</button>

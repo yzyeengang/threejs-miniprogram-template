@@ -7,9 +7,11 @@ import LightsAndShadows from "@/sub-pack-2/tresjs-demo/examples/LightsAndShadows
 import Shaders from "@/sub-pack-2/tresjs-demo/examples/Shaders.vue";
 import OrbitControls from "@/sub-pack-2/tresjs-demo/examples/OrbitControls.vue";
 import { mountTresApp } from "@minisheep/platform-adapter-integration/tresjs";
+import BaseEvent from "@/sub-pack-2/tresjs-demo/examples/BaseEvent.vue";
 
 const subPages = {
   base: YourFirstScene,
+  events: BaseEvent,
   orbitControls: OrbitControls,
   animation: BaseAnimation,
   gltf: GLTF,
@@ -33,6 +35,9 @@ Page({
     this.defaultHandler = result.eventHandler
 
     this.tresApp = this.data.currentScene && mountTresApp(result.canvas, this.data.currentScene);
+
+    //当前版本的 tresjs 使用 vueuse/core 的 useElementBounding 方式有误
+    this.tresApp && adapter.window.dispatchEvent({ type: 'resize' })
   },
   defaultHandler() {
 
