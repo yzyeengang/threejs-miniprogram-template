@@ -81,8 +81,6 @@ onMounted(async () => {
 
 watch([currentScene, canvas], ([scene, canvas], oldValue, onCleanup) => {
   const app = scene && canvas && mountTresApp(canvas, scene)
-  //最新版本的 tresjs 使用 vueuse/core 的 useElementBounding 方式有误
-  app && adapter.window.dispatchEvent({ type: 'resize' })
   app && onCleanup(() => {
     app.unmount();
   })
