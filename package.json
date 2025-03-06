@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "@minisheep/mini-program-polyfill-core": "^1.1.1",
-    "@minisheep/platform-adapter-integration": "file:M:\\miniprogram-polyfill\\packages\\platform-adapter-integration",
+    "@minisheep/platform-adapter-integration": "^1.0.1",
     "@minisheep/rollup-plugin-to-custom-chunk": "^1.0.3",
     "@minisheep/three-platform-adapter": "^1.2.2",
     "@rollup/plugin-babel": "^6.0.4",
