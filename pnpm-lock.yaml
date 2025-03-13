@@ -54,11 +54,11 @@ importers:
         specifier: 3.0.0-alpha-4050320250224001
         version: 3.0.0-alpha-4050320250224001(postcss@8.5.3)(rollup@4.35.0)(vue@3.5.13(typescript@5.8.2))
       '@minisheep/mini-program-polyfill-core':
-        specifier: ^1.1.2
-        version: 1.1.2
+        specifier: ^1.1.3
+        version: 1.1.3(@xmldom/xmldom@0.9.8)(event-target-shim@6.0.2)(web-streams-polyfill@4.1.0)
       '@minisheep/three-platform-adapter':
-        specifier: ^1.2.3
-        version: 1.2.3(@minisheep/mini-program-polyfill-core@1.1.2)(miniprogram-api-typings@4.0.5)(three@0.172.0)
+        specifier: ^1.2.5
+        version: 1.2.5(@minisheep/mini-program-polyfill-core@1.1.3(@xmldom/xmldom@0.9.8)(event-target-shim@6.0.2)(web-streams-polyfill@4.1.0))(miniprogram-api-typings@4.0.5)(three@0.172.0)
       three:
         specifier: ^0.172.0
         version: 0.172.0
@@ -85,8 +85,8 @@ importers:
         specifier: 3.0.0-alpha-4050320250224001
         version: 3.0.0-alpha-4050320250224001(postcss@8.5.3)(rollup@4.35.0)(vite@5.4.14(@types/node@22.13.10)(sass@1.85.1)(terser@5.39.0))(vue@3.5.13(typescript@5.8.2))
       '@minisheep/rollup-plugin-to-custom-chunk':
-        specifier: ^1.0.3
-        version: 1.0.3(rollup@4.35.0)
+        specifier: ^1.0.5
+        version: 1.0.5(rollup@4.35.0)
       '@tsconfig/node20':
         specifier: ^20.1.4
         version: 20.1.4
@@ -1397,21 +1397,25 @@ packages:
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
 
-  '@minisheep/mini-program-polyfill-core@1.1.2':
-    resolution: {integrity: sha512-GpvKiCDRfhcHIdmW2lleHnyhBVqJ0WD7s67m81O5R/8Dss40P3oPQ09bAJBgTbYI2QAsvlPS9J5zBrJssdrN1w==}
+  '@minisheep/mini-program-polyfill-core@1.1.3':
+    resolution: {integrity: sha512-8hRpHU8er3ma91UnoyQwXUXmh97+iCQLTUZU4Nv9/nH/gW3KAv17t9f5zRn4fpQuBBMG/MNO0i0CVkbglgcMLQ==}
+    peerDependencies:
+      '@xmldom/xmldom': ^0.9.0
+      event-target-shim: '>=6.0.0'
+      web-streams-polyfill: '>=4.0.0'
 
-  '@minisheep/rollup-plugin-to-custom-chunk@1.0.3':
-    resolution: {integrity: sha512-8ExevCZ7eyZtXAPGdvA5u5QGk7CbCe9FZ/gcASzKEOg+fEkXGnAFKIUMTZQwM+nKcKAGEqpZ4SBqG2iAk1GbLg==}
+  '@minisheep/rollup-plugin-to-custom-chunk@1.0.5':
+    resolution: {integrity: sha512-0++ziMPd1PH+wk6Hld9XteBJ1nNu7wqwadQtBXeU+L81xGBhAnfsc9QMdhG0aEUo+M21ZeklufU3b8HnqfZkiw==}
     peerDependencies:
       rollup: ^4.0.0
     peerDependenciesMeta:
       rollup:
         optional: true
 
-  '@minisheep/three-platform-adapter@1.2.3':
-    resolution: {integrity: sha512-mHHSqkckAJC2I/nLa7mljiinwm6+8VHBFLZLB+gaioEpdh1vXNhBv/luJgTulU0EWaSvBi4oKu+3B0q4rRnzuw==}
+  '@minisheep/three-platform-adapter@1.2.5':
+    resolution: {integrity: sha512-x9G1e2599XzkfquSh+1Tiqa0NxLeChNzfHwVAWVG1fDV/nusl9vxS7afItW767cATYC2+m4s1B2YSH1yuxdd4Q==}
     peerDependencies:
-      '@minisheep/mini-program-polyfill-core': ^1.1.2
+      '@minisheep/mini-program-polyfill-core': ^1.1.3
       minigame-api-typings: '*'
       miniprogram-api-typings: '*'
       three: '*'
@@ -1825,6 +1829,10 @@ packages:
 
   '@webgpu/types@0.1.55':
     resolution: {integrity: sha512-p97I8XEC1h04esklFqyIH+UhFrUcj8/1/vBWgc6lAK4jMJc+KbhUy8D4dquHYztFj6pHLqGcp/P1xvBBF4r3DA==}
+
+  '@xmldom/xmldom@0.9.8':
+    resolution: {integrity: sha512-p96FSY54r+WJ50FIOsCOjyj/wavs8921hG5+kVMmZgKcvIKxMXHTrjNJvRgWa/zuX3B6t2lijLNFaOyuxUH+2A==}
+    engines: {node: '>=14.6'}
 
   abab@2.0.6:
     resolution: {integrity: sha512-j2afSsaIENvHZN2B8GOpF566vZ5WVk5opAiMTvWgaQT8DkbOqsTfvNAvHoRGU2zzP8cPoqys+xHTRDWW8L+/BA==}
@@ -2356,6 +2364,10 @@ packages:
   etag@1.8.1:
     resolution: {integrity: sha512-aIL5Fx7mawVa300al2BnEE4iNvo1qETxLrPI/o05L7z6go7fCw1J6EQmbK4FmJ2AS7kgVF/KEZWufBfdClMcPg==}
     engines: {node: '>= 0.6'}
+
+  event-target-shim@6.0.2:
+    resolution: {integrity: sha512-8q3LsZjRezbFZ2PN+uP+Q7pnHUMmAOziU2vA2OwoFaKIXxlxl38IylhSSgUorWu/rf4er67w0ikBqjBFk/pomA==}
+    engines: {node: '>=10.13.0'}
 
   execa@5.1.1:
     resolution: {integrity: sha512-8uSpZZocAZRBAPIEINJj3Lo9HyGitllczc27Eh5YYojjMFMn8yHMDMaUHE2Jqfq05D/wucwI4JGURyXt1vchyg==}
@@ -3798,6 +3810,10 @@ packages:
   walker@1.0.8:
     resolution: {integrity: sha512-ts/8E8l5b7kY0vlWLewOkDXMmPdLcVV4GmOQLyxuSswIJsweeFZtAsMF7k1Nszz+TYBQrlYRmzOnr398y1JemQ==}
 
+  web-streams-polyfill@4.1.0:
+    resolution: {integrity: sha512-A7Jxrg7+eV+eZR/CIdESDnRGFb6/bcKukGvJBB5snI6cw3is1c2qamkYstC1bY1p08TyMRlN9eTMkxmnKJBPBw==}
+    engines: {node: '>= 8'}
+
   webidl-conversions@5.0.0:
     resolution: {integrity: sha512-VlZwKPCkYKxQgeSbH5EyngOmRp7Ww7I9rQLERETtf5ofd9pGeswWiOtogpEO850jziPRarreGxn5QIiTqpb2wA==}
     engines: {node: '>=8'}
@@ -4829,7 +4845,7 @@ snapshots:
       '@vue/compiler-sfc': 3.4.21
       '@vue/compiler-ssr': 3.4.21
       '@vue/server-renderer': 3.4.21(vue@3.5.13(typescript@5.8.2))
-      '@vue/shared': 3.5.13
+      '@vue/shared': 3.4.21
       adm-zip: 0.5.16
       autoprefixer: 10.4.21(postcss@8.5.3)
       base64url: 3.0.1
@@ -5925,14 +5941,18 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  '@minisheep/mini-program-polyfill-core@1.1.2':
+  '@minisheep/mini-program-polyfill-core@1.1.3(@xmldom/xmldom@0.9.8)(event-target-shim@6.0.2)(web-streams-polyfill@4.1.0)':
     dependencies:
+      '@xmldom/xmldom': 0.9.8
+      event-target-shim: 6.0.2
       type-fest: 4.37.0
+      web-streams-polyfill: 4.1.0
 
-  '@minisheep/rollup-plugin-to-custom-chunk@1.0.3(rollup@4.35.0)':
+  '@minisheep/rollup-plugin-to-custom-chunk@1.0.5(rollup@4.35.0)':
     dependencies:
       '@rollup/pluginutils': 5.1.4(rollup@4.35.0)
       debug: 4.4.0
+      lodash: 4.17.21
       lodash-es: 4.17.21
       picomatch: 4.0.2
     optionalDependencies:
@@ -5940,9 +5960,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@minisheep/three-platform-adapter@1.2.3(@minisheep/mini-program-polyfill-core@1.1.2)(miniprogram-api-typings@4.0.5)(three@0.172.0)':
+  '@minisheep/three-platform-adapter@1.2.5(@minisheep/mini-program-polyfill-core@1.1.3(@xmldom/xmldom@0.9.8)(event-target-shim@6.0.2)(web-streams-polyfill@4.1.0))(miniprogram-api-typings@4.0.5)(three@0.172.0)':
     dependencies:
-      '@minisheep/mini-program-polyfill-core': 1.1.2
+      '@minisheep/mini-program-polyfill-core': 1.1.3(@xmldom/xmldom@0.9.8)(event-target-shim@6.0.2)(web-streams-polyfill@4.1.0)
       three: 0.172.0
     optionalDependencies:
       miniprogram-api-typings: 4.0.5
@@ -6351,6 +6371,8 @@ snapshots:
       vue: 3.5.13(typescript@5.8.2)
 
   '@webgpu/types@0.1.55': {}
+
+  '@xmldom/xmldom@0.9.8': {}
 
   abab@2.0.6: {}
 
@@ -6882,6 +6904,8 @@ snapshots:
   esutils@2.0.3: {}
 
   etag@1.8.1: {}
+
+  event-target-shim@6.0.2: {}
 
   execa@5.1.1:
     dependencies:
@@ -8534,6 +8558,8 @@ snapshots:
   walker@1.0.8:
     dependencies:
       makeerror: 1.0.12
+
+  web-streams-polyfill@4.1.0: {}
 
   webidl-conversions@5.0.0: {}
 
