@@ -1,0 +1,11 @@
+<view class="content">
+  <image class="logo" src="/static/logo.png"/>
+  <view class="text-area">
+    <text class="title">{{ title }}</text>
+  </view>
+
+  <view class="btns">
+    <button wx:for="{{scenes}}" wx:for-item="scene" wx:key="name"
+            bindtap="navigateTo" data-target="{{scene.target}}">{{scene.name}}</button>
+  </view>
+</view>

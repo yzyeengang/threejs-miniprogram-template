@@ -1,0 +1,6 @@
+<view class="content">
+  <image class="logo" src="/static/logo.png"/>
+  <view class="text-area">
+    <text class="title"> 跳转中 </text>
+  </view>
+</view>

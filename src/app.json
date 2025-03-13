@@ -5,9 +5,17 @@
   ],
   "subPackages": [
     {
+      "root": "sub-pack-2-dep-1",
+      "pages": [
+        "entry"
+      ],
+      "name": "sub-pack-2-dep-1"
+    },
+    {
       "root": "sub-pack-2",
       "pages": [
-        "tresjs-demo/index"
+        "r3f-demo/index",
+        "r3f-entry/r3f-entry"
       ],
       "name": "sub-pack-2"
     }

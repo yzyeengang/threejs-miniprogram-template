@@ -1,0 +1,18 @@
+<view class="page-container">
+  <canvas
+    type="webgl2"
+    id="r3f_demo"
+    bindtouchstart="defaultHandler"
+    bindtouchmove="defaultHandler"
+    bindtouchcancel="defaultHandler"
+    bindtouchend="defaultHandler"
+    bindtap="defaultHandler"
+  >
+  </canvas>
+  <video src="{{video}}" wx:if="{{video}}"
+         id="video"
+         loop
+         muted
+         style="visibility: hidden;"
+  ></video>
+</view>

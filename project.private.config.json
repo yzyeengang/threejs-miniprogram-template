@@ -4,5 +4,25 @@
   "setting": {
     "compileHotReLoad": true
   },
-  "libVersion": "3.7.8"
+  "libVersion": "3.7.10",
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "sub-pack-2/r3f-demo/index",
+          "pathName": "sub-pack-2/r3f-demo/index",
+          "query": "scene=shopping",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "sub-pack-2/r3f-demo/index",
+          "pathName": "sub-pack-2/r3f-demo/index",
+          "query": "scene=base",
+          "launchMode": "default",
+          "scene": null
+        }
+      ]
+    }
+  }
 }
