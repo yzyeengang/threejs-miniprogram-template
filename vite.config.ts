@@ -10,6 +10,7 @@ export default defineConfig({
     exclude: ['@minisheep/three-platform-adapter']
   },
   plugins: [
+    // esm-only 的包
     glsl(),
     visualizer({
       emitFile: true,
@@ -33,6 +34,14 @@ export default defineConfig({
         'three/examples/jsm/**',
       ]
     }),
+
+    {
+      name:'find-dep',
+      config(config){
+        // uni 插件覆盖了这个导致不能正确识别 pnpm 安装模块的依赖
+        config.resolve!.preserveSymlinks = false;
+      }
+    },
 
     /**
      * 当你在某些情况需要开启 es6 转 es5 时，例如启用 skyline 或使用了手势系统(编译worklet),

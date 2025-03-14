@@ -54,11 +54,11 @@ importers:
         specifier: 3.0.0-alpha-4050320250224001
         version: 3.0.0-alpha-4050320250224001(postcss@8.5.3)(rollup@4.35.0)(vue@3.5.13(typescript@5.8.2))
       '@minisheep/mini-program-polyfill-core':
-        specifier: ^1.1.3
-        version: 1.1.3(@xmldom/xmldom@0.9.8)(event-target-shim@6.0.2)(web-streams-polyfill@4.1.0)
+        specifier: ^1.1.4
+        version: 1.1.4
       '@minisheep/three-platform-adapter':
-        specifier: ^1.2.5
-        version: 1.2.5(@minisheep/mini-program-polyfill-core@1.1.3(@xmldom/xmldom@0.9.8)(event-target-shim@6.0.2)(web-streams-polyfill@4.1.0))(miniprogram-api-typings@4.0.5)(three@0.172.0)
+        specifier: ^1.2.6
+        version: 1.2.6(@minisheep/mini-program-polyfill-core@1.1.4)(miniprogram-api-typings@4.0.5)(three@0.172.0)
       three:
         specifier: ^0.172.0
         version: 0.172.0
@@ -85,8 +85,8 @@ importers:
         specifier: 3.0.0-alpha-4050320250224001
         version: 3.0.0-alpha-4050320250224001(postcss@8.5.3)(rollup@4.35.0)(vite@5.4.14(@types/node@22.13.10)(sass@1.85.1)(terser@5.39.0))(vue@3.5.13(typescript@5.8.2))
       '@minisheep/rollup-plugin-to-custom-chunk':
-        specifier: ^1.0.5
-        version: 1.0.5(rollup@4.35.0)
+        specifier: ^1.0.6
+        version: 1.0.6(rollup@4.35.0)
       '@tsconfig/node20':
         specifier: ^20.1.4
         version: 20.1.4
@@ -1397,25 +1397,21 @@ packages:
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
 
-  '@minisheep/mini-program-polyfill-core@1.1.3':
-    resolution: {integrity: sha512-8hRpHU8er3ma91UnoyQwXUXmh97+iCQLTUZU4Nv9/nH/gW3KAv17t9f5zRn4fpQuBBMG/MNO0i0CVkbglgcMLQ==}
-    peerDependencies:
-      '@xmldom/xmldom': ^0.9.0
-      event-target-shim: '>=6.0.0'
-      web-streams-polyfill: '>=4.0.0'
+  '@minisheep/mini-program-polyfill-core@1.1.4':
+    resolution: {integrity: sha512-ve1c2uE+eyPaZ3cEw7C2+XtihH1LSrI1TIqYtmJh5AMUFppP75Ju7fr+nzc9yBDhsg65PxoFVluKumg+FKaImQ==}
 
-  '@minisheep/rollup-plugin-to-custom-chunk@1.0.5':
-    resolution: {integrity: sha512-0++ziMPd1PH+wk6Hld9XteBJ1nNu7wqwadQtBXeU+L81xGBhAnfsc9QMdhG0aEUo+M21ZeklufU3b8HnqfZkiw==}
+  '@minisheep/rollup-plugin-to-custom-chunk@1.0.6':
+    resolution: {integrity: sha512-T+SgpOMpvti6ZfbCj48Mec9lsAtOHiEFstoALrk/ak/0ifU5QH78gRl0886Xa84Mwiw6woxNInEaeoHTZJ9y7A==}
     peerDependencies:
       rollup: ^4.0.0
     peerDependenciesMeta:
       rollup:
         optional: true
 
-  '@minisheep/three-platform-adapter@1.2.5':
-    resolution: {integrity: sha512-x9G1e2599XzkfquSh+1Tiqa0NxLeChNzfHwVAWVG1fDV/nusl9vxS7afItW767cATYC2+m4s1B2YSH1yuxdd4Q==}
+  '@minisheep/three-platform-adapter@1.2.6':
+    resolution: {integrity: sha512-WWXWCRcESKXwrfNwCONmtv9yA7ktkBtj4gUvMRbN9q3beMQaOwnfC0g34t+YXSaXuMteSndjf1MI0Fp5f6e16g==}
     peerDependencies:
-      '@minisheep/mini-program-polyfill-core': ^1.1.3
+      '@minisheep/mini-program-polyfill-core': ^1.1.4
       minigame-api-typings: '*'
       miniprogram-api-typings: '*'
       three: '*'
@@ -5941,14 +5937,14 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.0
 
-  '@minisheep/mini-program-polyfill-core@1.1.3(@xmldom/xmldom@0.9.8)(event-target-shim@6.0.2)(web-streams-polyfill@4.1.0)':
+  '@minisheep/mini-program-polyfill-core@1.1.4':
     dependencies:
       '@xmldom/xmldom': 0.9.8
       event-target-shim: 6.0.2
       type-fest: 4.37.0
       web-streams-polyfill: 4.1.0
 
-  '@minisheep/rollup-plugin-to-custom-chunk@1.0.5(rollup@4.35.0)':
+  '@minisheep/rollup-plugin-to-custom-chunk@1.0.6(rollup@4.35.0)':
     dependencies:
       '@rollup/pluginutils': 5.1.4(rollup@4.35.0)
       debug: 4.4.0
@@ -5960,9 +5956,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@minisheep/three-platform-adapter@1.2.5(@minisheep/mini-program-polyfill-core@1.1.3(@xmldom/xmldom@0.9.8)(event-target-shim@6.0.2)(web-streams-polyfill@4.1.0))(miniprogram-api-typings@4.0.5)(three@0.172.0)':
+  '@minisheep/three-platform-adapter@1.2.6(@minisheep/mini-program-polyfill-core@1.1.4)(miniprogram-api-typings@4.0.5)(three@0.172.0)':
     dependencies:
-      '@minisheep/mini-program-polyfill-core': 1.1.3(@xmldom/xmldom@0.9.8)(event-target-shim@6.0.2)(web-streams-polyfill@4.1.0)
+      '@minisheep/mini-program-polyfill-core': 1.1.4
       three: 0.172.0
     optionalDependencies:
       miniprogram-api-typings: 4.0.5
