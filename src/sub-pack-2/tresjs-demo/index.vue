@@ -60,8 +60,8 @@ const currentScene = shallowRef<Component>();
 const canvas = shallowRef<HTMLCanvasElement>();
 
 onLoad((query) => {
-  const sceneId = query?.scene ?? 'base';
-  currentScene.value = subPages[sceneId as keyof typeof subPages] ?? subPages['base'];
+  const sceneId = query?.scene || 'base';
+  currentScene.value = subPages[sceneId as keyof typeof subPages] || subPages['base'];
 })
 
 onMounted(async () => {
