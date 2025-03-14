@@ -52,7 +52,7 @@
     "@dcloudio/uni-mp-xhs": "3.0.0-alpha-4050320250224001",
     "@dcloudio/uni-quickapp-webview": "3.0.0-alpha-4050320250224001",
     "@minisheep/mini-program-polyfill-core": "^1.1.4",
-    "@minisheep/three-platform-adapter": "^1.2.6",
+    "@minisheep/three-platform-adapter": "^1.2.7",
     "three": "^0.172.0",
     "vue": "^3.5.13",
     "vue-i18n": "^9.14.3"

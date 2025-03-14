@@ -57,8 +57,8 @@ importers:
         specifier: ^1.1.4
         version: 1.1.4
       '@minisheep/three-platform-adapter':
-        specifier: ^1.2.6
-        version: 1.2.6(@minisheep/mini-program-polyfill-core@1.1.4)(miniprogram-api-typings@4.0.5)(three@0.172.0)
+        specifier: ^1.2.7
+        version: 1.2.7(@minisheep/mini-program-polyfill-core@1.1.4)(miniprogram-api-typings@4.0.5)(three@0.172.0)
       three:
         specifier: ^0.172.0
         version: 0.172.0
@@ -1408,8 +1408,8 @@ packages:
       rollup:
         optional: true
 
-  '@minisheep/three-platform-adapter@1.2.6':
-    resolution: {integrity: sha512-WWXWCRcESKXwrfNwCONmtv9yA7ktkBtj4gUvMRbN9q3beMQaOwnfC0g34t+YXSaXuMteSndjf1MI0Fp5f6e16g==}
+  '@minisheep/three-platform-adapter@1.2.7':
+    resolution: {integrity: sha512-Advf8rbp3P5K92hBOV37p636tjSe6aEZdQxnwwQUqKbNXqFtWLtnbqQBK0W8Gxjk5H7gFSBNmCprieWmS0vmlA==}
     peerDependencies:
       '@minisheep/mini-program-polyfill-core': ^1.1.4
       minigame-api-typings: '*'
@@ -5956,7 +5956,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@minisheep/three-platform-adapter@1.2.6(@minisheep/mini-program-polyfill-core@1.1.4)(miniprogram-api-typings@4.0.5)(three@0.172.0)':
+  '@minisheep/three-platform-adapter@1.2.7(@minisheep/mini-program-polyfill-core@1.1.4)(miniprogram-api-typings@4.0.5)(three@0.172.0)':
     dependencies:
       '@minisheep/mini-program-polyfill-core': 1.1.4
       three: 0.172.0
