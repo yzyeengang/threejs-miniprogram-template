@@ -21,7 +21,7 @@
     "compileWorklet": true,
     "swc": true,
     "--使用es6转es5备注--": "当你在某些情况需要开启 es6 转 es5 时，例如启用 skyline 或使用了手势系统(编译worklet), 那么需要将 @minisheep相关的代码（特别是输出的worker)排除在外，否者将会出现问题",
-    "es6": false,
+    "es6": true,
     "babelSetting": {
       "ignore": [
         "workers",

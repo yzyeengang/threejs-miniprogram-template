@@ -23,10 +23,10 @@
     "g": "weapp-vite generate"
   },
   "devDependencies": {
-    "@minisheep/mini-program-polyfill-core": "^1.1.1",
-    "@minisheep/platform-adapter-integration": "^1.0.2",
-    "@minisheep/rollup-plugin-to-custom-chunk": "^1.0.3",
-    "@minisheep/three-platform-adapter": "^1.2.2",
+    "@minisheep/mini-program-polyfill-core": "^1.1.4",
+    "@minisheep/platform-adapter-integration": "^1.1.2",
+    "@minisheep/rollup-plugin-to-custom-chunk": "^1.0.6",
+    "@minisheep/three-platform-adapter": "^1.2.6",
     "@rollup/plugin-babel": "^6.0.4",
     "@tresjs/cientos": "^4.1.1",
     "@tresjs/core": "^4.3.3",
