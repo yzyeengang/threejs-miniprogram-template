@@ -5,15 +5,15 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "cross-env OPEN_DEVTOOL=false vite build --mode development --watch",
+    "dev": "cross-env OPEN_DEVTOOL=true vite build --mode development --watch",
     "build": "vite build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@minisheep/mini-program-polyfill-core": "^1.0.4",
-    "@minisheep/three-platform-adapter": "^1.2.2",
+    "@minisheep/mini-program-polyfill-core": "^1.1.4",
+    "@minisheep/three-platform-adapter": "^1.2.6",
     "three": "^0.172.0"
   },
   "devDependencies": {

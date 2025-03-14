@@ -9,11 +9,11 @@ importers:
   .:
     dependencies:
       '@minisheep/mini-program-polyfill-core':
-        specifier: ^1.0.4
-        version: 1.0.4
+        specifier: ^1.1.4
+        version: 1.1.4
       '@minisheep/three-platform-adapter':
-        specifier: ^1.2.2
-        version: 1.2.2(@minisheep/mini-program-polyfill-core@1.0.4)(minigame-api-typings@3.8.7)(three@0.172.0)
+        specifier: ^1.2.6
+        version: 1.2.6(@minisheep/mini-program-polyfill-core@1.1.4)(minigame-api-typings@3.8.7)(three@0.172.0)
       three:
         specifier: ^0.172.0
         version: 0.172.0
@@ -219,13 +219,13 @@ packages:
   '@jridgewell/trace-mapping@0.3.25':
     resolution: {integrity: sha512-vNk6aEwybGtawWmy/PzwnGDOjCkLWSD2wqvjGGAgOAwCGWySYXfYoxt00IJkTF+8Lb57DwOb3Aa0o9CApepiYQ==}
 
-  '@minisheep/mini-program-polyfill-core@1.0.4':
-    resolution: {integrity: sha512-BVbOtk1eg0cDRDgJ+WBWAf9hDR7Zn3xo9j1LBu8CVN+SIYL6ea7JUBG70BefCTTU5pZXsiRD70+SmzA4yiDPqA==}
+  '@minisheep/mini-program-polyfill-core@1.1.4':
+    resolution: {integrity: sha512-ve1c2uE+eyPaZ3cEw7C2+XtihH1LSrI1TIqYtmJh5AMUFppP75Ju7fr+nzc9yBDhsg65PxoFVluKumg+FKaImQ==}
 
-  '@minisheep/three-platform-adapter@1.2.2':
-    resolution: {integrity: sha512-0cxBQGn301AgO+ZZ1wfby8ygLhGUObLbXPgNDC2nFbV0EkH0TpeOXcVULvREBxlCKrSPvJf3vEP99vhPMMPvSg==}
+  '@minisheep/three-platform-adapter@1.2.6':
+    resolution: {integrity: sha512-WWXWCRcESKXwrfNwCONmtv9yA7ktkBtj4gUvMRbN9q3beMQaOwnfC0g34t+YXSaXuMteSndjf1MI0Fp5f6e16g==}
     peerDependencies:
-      '@minisheep/mini-program-polyfill-core': ^1.1.1
+      '@minisheep/mini-program-polyfill-core': ^1.1.4
       minigame-api-typings: '*'
       miniprogram-api-typings: '*'
       three: '*'
@@ -461,6 +461,10 @@ packages:
   '@webgpu/types@0.1.53':
     resolution: {integrity: sha512-x+BLw/opaz9LiVyrMsP75nO1Rg0QfrACUYIbVSfGwY/w0DiWIPYYrpte6us//KZXinxFAOJl0+C17L1Vi2vmDw==}
 
+  '@xmldom/xmldom@0.9.8':
+    resolution: {integrity: sha512-p96FSY54r+WJ50FIOsCOjyj/wavs8921hG5+kVMmZgKcvIKxMXHTrjNJvRgWa/zuX3B6t2lijLNFaOyuxUH+2A==}
+    engines: {node: '>=14.6'}
+
   acorn@8.14.1:
     resolution: {integrity: sha512-OvQ/2pUDKmgfCg++xsTX1wGxfTaszcHVcTctW4UJB4hibJx2HXxxO5UmVgyjMa+ZDsiaf5wWLXYpRWMmBI0QHg==}
     engines: {node: '>=0.4.0'}
@@ -545,6 +549,10 @@ packages:
 
   estree-walker@2.0.2:
     resolution: {integrity: sha512-Rfkk/Mp/DL7JVje3u18FxFujQlTNR2q6QfMSMB7AvCBx91NGj/ba3kCfza0f6dVDbw7YlRf/nDrn7pQrCCyQ/w==}
+
+  event-target-shim@6.0.2:
+    resolution: {integrity: sha512-8q3LsZjRezbFZ2PN+uP+Q7pnHUMmAOziU2vA2OwoFaKIXxlxl38IylhSSgUorWu/rf4er67w0ikBqjBFk/pomA==}
+    engines: {node: '>=10.13.0'}
 
   fflate@0.8.2:
     resolution: {integrity: sha512-cPJU47OaAoCbg0pBvzsgpTPhmhqI5eJjh/JIu8tPj5q+T7iLvW/JAYUqmE7KOB4R1ZyEhzBaIQpQpardBF5z8A==}
@@ -790,6 +798,10 @@ packages:
       yaml:
         optional: true
 
+  web-streams-polyfill@4.1.0:
+    resolution: {integrity: sha512-A7Jxrg7+eV+eZR/CIdESDnRGFb6/bcKukGvJBB5snI6cw3is1c2qamkYstC1bY1p08TyMRlN9eTMkxmnKJBPBw==}
+    engines: {node: '>= 8'}
+
   which@2.0.2:
     resolution: {integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==}
     engines: {node: '>= 8'}
@@ -916,13 +928,16 @@ snapshots:
       '@jridgewell/sourcemap-codec': 1.5.0
     optional: true
 
-  '@minisheep/mini-program-polyfill-core@1.0.4':
+  '@minisheep/mini-program-polyfill-core@1.1.4':
     dependencies:
+      '@xmldom/xmldom': 0.9.8
+      event-target-shim: 6.0.2
       type-fest: 4.32.0
+      web-streams-polyfill: 4.1.0
 
-  '@minisheep/three-platform-adapter@1.2.2(@minisheep/mini-program-polyfill-core@1.0.4)(minigame-api-typings@3.8.7)(three@0.172.0)':
+  '@minisheep/three-platform-adapter@1.2.6(@minisheep/mini-program-polyfill-core@1.1.4)(minigame-api-typings@3.8.7)(three@0.172.0)':
     dependencies:
-      '@minisheep/mini-program-polyfill-core': 1.0.4
+      '@minisheep/mini-program-polyfill-core': 1.1.4
       three: 0.172.0
     optionalDependencies:
       minigame-api-typings: 3.8.7
@@ -1079,6 +1094,8 @@ snapshots:
 
   '@webgpu/types@0.1.53': {}
 
+  '@xmldom/xmldom@0.9.8': {}
+
   acorn@8.14.1:
     optional: true
 
@@ -1180,6 +1197,8 @@ snapshots:
   escalade@3.2.0: {}
 
   estree-walker@2.0.2: {}
+
+  event-target-shim@6.0.2: {}
 
   fflate@0.8.2: {}
 
@@ -1385,6 +1404,8 @@ snapshots:
       fsevents: 2.3.3
       sass: 1.83.1
       terser: 5.37.0
+
+  web-streams-polyfill@4.1.0: {}
 
   which@2.0.2:
     dependencies:
