@@ -23,9 +23,9 @@
     "g": "weapp-vite generate"
   },
   "devDependencies": {
-    "@minisheep/mini-program-polyfill-core": "^1.1.1",
-    "@minisheep/rollup-plugin-to-custom-chunk": "^1.0.3",
-    "@minisheep/three-platform-adapter": "^1.2.2",
+    "@minisheep/mini-program-polyfill-core": "^1.1.4",
+    "@minisheep/rollup-plugin-to-custom-chunk": "^1.0.6",
+    "@minisheep/three-platform-adapter": "^1.2.6",
     "@types/three": "^0.172.0",
     "miniprogram-api-typings": "^4.0.2",
     "rollup-plugin-visualizer": "^5.14.0",
