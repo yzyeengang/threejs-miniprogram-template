@@ -81,34 +81,6 @@ export default defineConfig({
       ]
     }),
 
-    /**
-     * 当你在某些情况需要开启 es6 转 es5 时，例如启用 skyline 或使用了手势系统(编译worklet),
-     * 那么需要将 @minisheep相关的代码（特别是输出的worker)排除在外，否者将会出现问题
-     * */
-    {
-      name: 'es5-ignore',
-      generateBundle(options, bundles) {
-        // 覆盖一下项目配置
-        if (!bundles['project.config.json']) return null;
-        const target = bundles['project.config.json'] as Rollup.OutputAsset;
-        const data = JSON.parse(target.source as string);
-        Object.assign(data.setting, {
-          // 跳过库文件的 es6 转换不然有问题
-          babelSetting: {
-            ignore: [
-              'workers',
-              'common/my-vendor.js',
-              'sub-pack-2/vendor.js',
-            ],
-            disablePlugins: [],
-            outputPath: ''
-          }
-        });
-
-        target.source = JSON.stringify(data, null, 2);
-      }
-    },
-
     useStandardVuePlugin({
       include: [
         tresjsComponentPattern

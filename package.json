@@ -52,7 +52,7 @@
     "@dcloudio/uni-mp-xhs": "3.0.0-alpha-4050320250224001",
     "@dcloudio/uni-quickapp-webview": "3.0.0-alpha-4050320250224001",
     "@minisheep/mini-program-polyfill-core": "^1.1.4",
-    "@minisheep/three-platform-adapter": "^1.2.6",
+    "@minisheep/three-platform-adapter": "^1.2.7",
     "@tresjs/cientos": "^4.1.1",
     "@tresjs/core": "^4.3.3",
     "three": "^0.172.0",

@@ -60,8 +60,8 @@ importers:
         specifier: ^1.1.4
         version: 1.1.4
       '@minisheep/three-platform-adapter':
-        specifier: ^1.2.6
-        version: 1.2.6(@minisheep/mini-program-polyfill-core@1.1.4)(miniprogram-api-typings@4.0.5)(three@0.172.0)
+        specifier: ^1.2.7
+        version: 1.2.7(@minisheep/mini-program-polyfill-core@1.1.4)(miniprogram-api-typings@4.0.5)(three@0.172.0)
       '@tresjs/cientos':
         specifier: ^4.1.1
         version: 4.1.1(@tresjs/core@4.3.3(three@0.172.0)(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2)))(@types/three@0.171.0)(three@0.172.0)(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2))
@@ -98,7 +98,7 @@ importers:
         version: 3.0.0-alpha-4050320250224001(@vueuse/core@12.8.2(typescript@5.8.2))(postcss@8.5.3)(rollup@4.34.9)(vite@5.4.14(@types/node@22.13.10)(sass@1.85.1)(terser@5.39.0))(vue@3.5.13(typescript@5.8.2))
       '@minisheep/platform-adapter-integration':
         specifier: ^1.1.2
-        version: 1.1.2(@minisheep/three-platform-adapter@1.2.6(@minisheep/mini-program-polyfill-core@1.1.4)(miniprogram-api-typings@4.0.5)(three@0.172.0))(@rollup/pluginutils@5.1.4(rollup@4.34.9))(debug@4.4.0)(rollup@4.34.9)(vue@3.5.13(typescript@5.8.2))
+        version: 1.1.2(@minisheep/three-platform-adapter@1.2.7(@minisheep/mini-program-polyfill-core@1.1.4)(miniprogram-api-typings@4.0.5)(three@0.172.0))(@rollup/pluginutils@5.1.4(rollup@4.34.9))(debug@4.4.0)(rollup@4.34.9)(vue@3.5.13(typescript@5.8.2))
       '@minisheep/rollup-plugin-to-custom-chunk':
         specifier: ^1.0.6
         version: 1.0.6(rollup@4.34.9)
@@ -1467,8 +1467,8 @@ packages:
       rollup:
         optional: true
 
-  '@minisheep/three-platform-adapter@1.2.6':
-    resolution: {integrity: sha512-WWXWCRcESKXwrfNwCONmtv9yA7ktkBtj4gUvMRbN9q3beMQaOwnfC0g34t+YXSaXuMteSndjf1MI0Fp5f6e16g==}
+  '@minisheep/three-platform-adapter@1.2.7':
+    resolution: {integrity: sha512-Advf8rbp3P5K92hBOV37p636tjSe6aEZdQxnwwQUqKbNXqFtWLtnbqQBK0W8Gxjk5H7gFSBNmCprieWmS0vmlA==}
     peerDependencies:
       '@minisheep/mini-program-polyfill-core': ^1.1.4
       minigame-api-typings: '*'
@@ -6149,9 +6149,9 @@ snapshots:
       type-fest: 4.37.0
       web-streams-polyfill: 4.1.0
 
-  '@minisheep/platform-adapter-integration@1.1.2(@minisheep/three-platform-adapter@1.2.6(@minisheep/mini-program-polyfill-core@1.1.4)(miniprogram-api-typings@4.0.5)(three@0.172.0))(@rollup/pluginutils@5.1.4(rollup@4.34.9))(debug@4.4.0)(rollup@4.34.9)(vue@3.5.13(typescript@5.8.2))':
+  '@minisheep/platform-adapter-integration@1.1.2(@minisheep/three-platform-adapter@1.2.7(@minisheep/mini-program-polyfill-core@1.1.4)(miniprogram-api-typings@4.0.5)(three@0.172.0))(@rollup/pluginutils@5.1.4(rollup@4.34.9))(debug@4.4.0)(rollup@4.34.9)(vue@3.5.13(typescript@5.8.2))':
     dependencies:
-      '@minisheep/three-platform-adapter': 1.2.6(@minisheep/mini-program-polyfill-core@1.1.4)(miniprogram-api-typings@4.0.5)(three@0.172.0)
+      '@minisheep/three-platform-adapter': 1.2.7(@minisheep/mini-program-polyfill-core@1.1.4)(miniprogram-api-typings@4.0.5)(three@0.172.0)
       '@rollup/pluginutils': 5.1.4(rollup@4.34.9)
       debug: 4.4.0
       vue: 3.5.13(typescript@5.8.2)
@@ -6170,7 +6170,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@minisheep/three-platform-adapter@1.2.6(@minisheep/mini-program-polyfill-core@1.1.4)(miniprogram-api-typings@4.0.5)(three@0.172.0)':
+  '@minisheep/three-platform-adapter@1.2.7(@minisheep/mini-program-polyfill-core@1.1.4)(miniprogram-api-typings@4.0.5)(three@0.172.0)':
     dependencies:
       '@minisheep/mini-program-polyfill-core': 1.1.4
       three: 0.172.0
