@@ -12,8 +12,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@minisheep/mini-program-polyfill-core": "^1.1.4",
-    "@minisheep/three-platform-adapter": "^1.2.6",
+    "@minisheep/mini-program-polyfill-core": "^1.1.5-dev.1",
+    "@minisheep/three-platform-adapter": "^2.0.0-dev.4",
     "three": "^0.172.0"
   },
   "devDependencies": {
