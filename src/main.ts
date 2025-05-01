@@ -4,12 +4,9 @@ import '@minisheep/mini-program-polyfill-core/wechat-polyfill';
 // #endif
 import { createSSRApp } from "vue";
 import App from "./App.vue";
-import { adapter } from '@minisheep/three-platform-adapter';
 // #ifdef MP-WEIXIN
-import { wechat } from '@minisheep/three-platform-adapter/wechat';
-adapter.useAdapter(wechat);
+import '@minisheep/three-platform-adapter/wechat';
 // #endif
-adapter.patch('THREEGlobals');
 
 export function createApp() {
   const app = createSSRApp(App);
