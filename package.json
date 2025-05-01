@@ -17,15 +17,15 @@
   "keywords": [],
   "scripts": {
     "dev": "weapp-vite dev",
-    "dev:open": "cross-env DEBUG=none weapp-vite dev -o",
+    "dev:open": "cross-env DEBUG=minisheep:mp-chunk-splitter weapp-vite dev -o",
     "build": "weapp-vite build",
     "open": "weapp-vite open",
     "g": "weapp-vite generate"
   },
   "devDependencies": {
-    "@minisheep/mini-program-polyfill-core": "^1.1.4",
-    "@minisheep/rollup-plugin-to-custom-chunk": "^1.0.6",
-    "@minisheep/three-platform-adapter": "^1.2.7",
+    "@minisheep/mini-program-polyfill-core": "^1.1.5-dev.1",
+    "@minisheep/three-platform-adapter": "^2.0.0-dev.4",
+    "@minisheep/vite-plugin-mp-chunk-splitter": "^1.0.1-dev.2",
     "@types/three": "^0.172.0",
     "miniprogram-api-typings": "^4.0.2",
     "rollup-plugin-visualizer": "^5.14.0",
