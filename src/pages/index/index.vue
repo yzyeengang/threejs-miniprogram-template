@@ -5,8 +5,8 @@
             <text class="title">{{ title }}</text>
         </view>
         <view class="btns">
-            <button @tap="navigateTo" data-target="/sub-pack-2/particles/index">粒子特效</button>
-            <button @tap="navigateTo" data-target="/sub-pack-2/gltf-loader/index">gltf loader</button>
+            <button @tap="navigateTo" data-target="/sub-pack-2/r3f-entry?type=base">基础示例</button>
+            <button @tap="navigateTo" data-target="/sub-pack-2/r3f-entry?type=complex">复杂示例</button>
         </view>
     </view>
 </template>

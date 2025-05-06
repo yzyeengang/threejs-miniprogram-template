@@ -75,9 +75,7 @@ const instance = getCurrentInstance();
 
 onMounted(() => {
   adapter.useCanvas(`#${props.canvasId}`, (instance as any).ctx).then((result) => {
-    additionHandler = (e: TouchEventLike) => {
-      result.eventHandler(e, false)
-    }
+    additionHandler = result.eventHandler
     emit('useCanvas', result);
   })
 })

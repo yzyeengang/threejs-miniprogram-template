@@ -4,42 +4,46 @@ import threePlatformAdapter from '@minisheep/three-platform-adapter/plugin';
 import glsl from 'vite-plugin-glsl';
 import { visualizer } from 'rollup-plugin-visualizer';
 import { createMpChunkSplitterPlugin } from "@minisheep/vite-plugin-mp-chunk-splitter";
+import react from '@vitejs/plugin-react';
+import {supportR3fInUni} from '@minisheep/platform-adapter-integration/r3f/plugin'
 // https://vitejs.dev/config/
 export default defineConfig({
   optimizeDeps: {
     exclude: ['@minisheep/three-platform-adapter']
   },
+  resolve:{
+    // dedupe:['troika-three-text']
+  },
+  build:{
+    rollupOptions:{
+      external: [
+        // @react-three/drei 有依赖它，但如果你实际上不应该使用 dom-only 相关组件如 Html，ScrollControls
+        'react-dom/client'
+      ],
+      treeshake:{
+        preset: 'smallest',
+        annotations: true,
+        moduleSideEffects: 'no-external'
+      }
+    }
+  },
   plugins: [
     // esm-only 的包
     glsl(),
-    //@ts-expect-error 当前版本在以 esm 形式导出格式异常
-    uni.default(),
     visualizer({
       emitFile: true,
     }),
     threePlatformAdapter(),
+    react(),
+    //@ts-expect-error 当前版本在以 esm 形式导出格式异常
+    uni.default(),
+    supportR3fInUni(),
+
     createMpChunkSplitterPlugin({
       singleChunkMode: true,
       subpackages: ['sub-pack-2'],
       packageSizeLimit: 1.8 * 1024 * 1024
     }),
-
-
-    // //默认情况 uni-app 会将node_modules下的模块全都打包在 common/vendor.js
-    // //你也可以自定义输出目录，但需自己把控不影响应用加载顺序
-    // //可以设置环境变量进行调试 如 cross-env DEBUG=minisheep:to-custom-chunk uni build -p mp-weixin
-    // toCustomChunkPlugin({
-    //   'common/my-vendor': [
-    //     '@minisheep/three-platform-adapter',
-    //     '@minisheep/three-platform-adapter/wechat',
-    //   ],
-    //   'sub-pack-2/vendor': [
-    //     '@minisheep/three-platform-adapter/dist/three-override/jsm/**',
-    //     'three',
-    //     'three/examples/jsm/**',
-    //   ]
-    // }),
-
     {
       name:'find-dep',
       config(config){

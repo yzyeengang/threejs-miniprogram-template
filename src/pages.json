@@ -11,10 +11,10 @@
       "root": "sub-pack-2",
       "pages": [
         {
-          "path": "particles/index"
+          "path": "r3f-demo"
         },
         {
-          "path": "gltf-loader/index"
+          "path": "r3f-entry"
         }
       ]
     }
