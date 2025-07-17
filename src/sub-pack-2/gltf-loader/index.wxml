@@ -7,6 +7,7 @@
     bindtouchcancel="defaultHandler"
     bindtouchend="defaultHandler"
     bindtap="defaultHandler"
+    disable-scroll
   >
   </canvas>
 </view>
